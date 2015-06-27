@@ -31,10 +31,10 @@ import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.netflix.hystrix.HystrixThreadPoolKey;
 import com.netflix.hystrix.HystrixThreadPoolProperties;
-import com.netflix.niws.client.http.HttpClientRequest;
-import com.netflix.niws.client.http.HttpClientResponse;
+import com.netflix.client.http.HttpRequest;
+import com.netflix.client.http.HttpResponse;
 import com.netflix.niws.client.http.RestClient;
-import com.netflix.niws.client.http.HttpClientRequest.Verb;
+import com.netflix.client.http.HttpRequest.Verb;
 
 public class ValidateTokenCommand extends HystrixCommand<CustomerSession> {
 	private static final Log log = LogFactory.getLog(ValidateTokenCommand.class);
@@ -56,10 +56,10 @@ public class ValidateTokenCommand extends HystrixCommand<CustomerSession> {
 		try {
 			RestClient client = (RestClient) ClientFactory.getNamedClient(CommandConstants.ACME_AIR_AUTH_SERVICE_NAMED_CLIENT);
 	
-			HttpClientRequest request = HttpClientRequest.newBuilder().setVerb(Verb.GET).setUri(new URI(CommandConstants.ACME_AIR_AUTH_SERVICE_CONTEXT_AND_REST_PATH + "/authtoken/" + tokenid)).build();
-			HttpClientResponse response = client.executeWithLoadBalancer(request);
+			HttpRequest request = HttpRequest.newBuilder().verb(Verb.GET).uri(new URI(CommandConstants.ACME_AIR_AUTH_SERVICE_CONTEXT_AND_REST_PATH + "/authtoken/" + tokenid)).build();
+			HttpResponse response = client.executeWithLoadBalancer(request);
 			
-			responseString = IOUtils.toString(response.getRawEntity(), Charsets.UTF_8);
+			responseString = IOUtils.toString(response.getInputStream(), Charsets.UTF_8);
 			log.debug("responseString = " + responseString);
 			ObjectMapper mapper = new ObjectMapper();
 			CustomerSession cs = mapper.readValue(responseString, CustomerSession.class);

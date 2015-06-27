@@ -23,7 +23,6 @@ import org.springframework.stereotype.Component;
 
 import com.acmeair.entities.*;
 import com.acmeair.service.*;
-import com.acmeair.wxs.utils.TransactionService;
 
 import javax.ws.rs.core.Context;
 
@@ -39,11 +38,7 @@ public class AuthTokenREST {
 	private boolean initializedTXService = false;
 	
 	private TransactionService getTxService() {
-		if (!this.initializedTXService) {
-			this.initializedTXService = true;
-			transactionService = ServiceLocator.getService(TransactionService.class);
-		}
-		return transactionService;
+		return null;	
 	}
 
 	@POST

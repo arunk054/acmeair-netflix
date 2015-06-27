@@ -24,7 +24,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.acmeair.web.config.WXSDirectAppConfig;
+import  com.acmeair.web.config.MongoDirectAppConfig;
 
 public class ServiceLocator {
 
@@ -84,9 +84,9 @@ public class ServiceLocator {
 		}
 
 		// TODO:  Later add back in other implementations
-		type = "wxsdirect";
+		type = "mongodirect";
 		logger.info("Using default repository :" + type);
-		ctx = new AnnotationConfigApplicationContext(WXSDirectAppConfig.class);
+		ctx = new AnnotationConfigApplicationContext(MongoDirectAppConfig.class);
 	}
 
 	public static <T> T getService(Class<T> clazz) {

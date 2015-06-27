@@ -32,12 +32,13 @@ import org.apache.commons.logging.LogFactory;
 
 import com.acmeair.entities.CustomerSession;
 import com.acmeair.web.hystrixcommands.ValidateTokenCommand;
-import com.acmeair.wxs.utils.*;
+import com.acmeair.service.TransactionService;
 
 public class RESTCookieSessionFilter implements Filter {
 	private static final Log log = LogFactory.getLog(RESTCookieSessionFilter.class);
 	
 	static final String LOGIN_USER = "acmeair.login_user";
+	static final ThreadLocal<HttpServletRequest> THREAD_LOCAL = new ThreadLocal<HttpServletRequest>();
 	private static final String LOGIN_PATH = "/rest/api/login";
 	private static final String LOGOUT_PATH = "/rest/api/login/logout";
 	
@@ -50,13 +51,7 @@ public class RESTCookieSessionFilter implements Filter {
 
 	private TransactionService getTxService()
 	{
-		if (!this.initializedTXService)
-		{
-			this.initializedTXService = true;
-			transactionService = ServiceLocator.getService(TransactionService.class);
-		}
-		
-		return transactionService;
+		return null;	
 	}
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse resp,	FilterChain chain) throws IOException, ServletException {
@@ -107,8 +102,11 @@ public class RESTCookieSessionFilter implements Filter {
 			// Need the URLDecoder so that I can get @ not %40
 				ValidateTokenCommand validateCommand = new ValidateTokenCommand(sessionId);
 				CustomerSession cs = validateCommand.execute();
+			System.out.println("ARUN: before CS");
 			if (cs != null) {
+				System.out.println("ARUN Before Set Attr "+LOGIN_USER+" id "+cs.getCustomerid());
 				request.setAttribute(LOGIN_USER, cs.getCustomerid());
+				THREAD_LOCAL.set(request);
 				chain.doFilter(req, resp);
 				return;
 			}

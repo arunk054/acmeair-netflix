@@ -25,6 +25,7 @@ import com.acmeair.entities.*;
 import com.acmeair.service.*;
 
 import javax.ws.rs.core.Context;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Path("/customer")
 @Component
@@ -32,11 +33,13 @@ public class CustomerREST {
 	
 	private CustomerService customerService = ServiceLocator.getService(CustomerService.class);
 	
-	@Context 
-	private HttpServletRequest request;
+	
+	//@Context	
+	//private HttpServletRequest request;
 
 
 	private boolean validate(String customerid)	{
+		HttpServletRequest request = RESTCookieSessionFilter.THREAD_LOCAL.get();
 		String loginUser = (String) request.getAttribute(RESTCookieSessionFilter.LOGIN_USER);
 		return customerid.equals(loginUser);
 	}

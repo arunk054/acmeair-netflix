@@ -16,9 +16,8 @@
 package com.acmeair.entities;
 
 import java.io.Serializable;
-import com.ibm.websphere.objectgrid.plugins.PartitionableKey;
 
-public class BookingPK implements Serializable, PartitionableKey{
+public class BookingPK implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	private String id;
@@ -50,10 +49,6 @@ public class BookingPK implements Serializable, PartitionableKey{
 		this.customerId = customerId;
 	}
 
-	@Override
-	public Object ibmGetPartition() {
-		return this.customerId;
-	}
 
 	@Override
 	public int hashCode() {
