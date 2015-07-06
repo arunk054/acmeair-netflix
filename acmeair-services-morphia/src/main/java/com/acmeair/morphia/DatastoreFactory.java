@@ -50,7 +50,6 @@ public class DatastoreFactory {
 	public static Datastore getDatastore(Datastore ds)
 	{
 		Datastore result = ds ;
-	System.out.println("Inside getDatastore : ARUN: monguurl is :"+mongourl);	
 		if (mongourl!=null)
 		{
 			try{

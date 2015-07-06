@@ -102,9 +102,7 @@ public class RESTCookieSessionFilter implements Filter {
 			// Need the URLDecoder so that I can get @ not %40
 				ValidateTokenCommand validateCommand = new ValidateTokenCommand(sessionId);
 				CustomerSession cs = validateCommand.execute();
-			System.out.println("ARUN: before CS");
 			if (cs != null) {
-				System.out.println("ARUN Before Set Attr "+LOGIN_USER+" id "+cs.getCustomerid());
 				request.setAttribute(LOGIN_USER, cs.getCustomerid());
 				THREAD_LOCAL.set(request);
 				chain.doFilter(req, resp);
