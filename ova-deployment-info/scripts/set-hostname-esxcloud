@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+# set-hostname-esxcloud         
+#
+# description: 	set a hostname based on dhcp name, required  because eureka expects a unique hostname.
+
+# Source function library.
+. /etc/init.d/functions
+
+
+RETVAL=$?
+HOSTNAME_FILE=/etc/hostname
+HOSTS_FILE=/etc/hosts
+
+
+case "$1" in
+ start)
+	#Get ip addr using ifconfig
+	IP_ADDR=`ifconfig|grep 'inet addr'|grep Bcast|cut -d ':' -f2|cut -d ' ' -f1`
+	hostname=$(host $IP_ADDR | cut -d ' ' -f 5 | sed -e 's/\.$//')
+	echo $hostname > $HOSTNAME_FILE
+	echo '127.0.0.1 '$hostname>>/etc/hosts
+	hostname $hostname
+	;;
+ *)
+ 	echo $"Usage: $0 {start}"
+	exit 1
+	;;
+esac
+
+exit $RETVAL
