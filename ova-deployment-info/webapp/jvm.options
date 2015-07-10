@@ -1,0 +1,2 @@
+-Darchaius.deployment.applicationId=acmeair-webapp
+-Darchaius.dynamicPropertyFactory.registerConfigWithJMX=true
