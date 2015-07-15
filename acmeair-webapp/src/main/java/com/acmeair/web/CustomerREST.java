@@ -49,10 +49,10 @@ public class CustomerREST {
 	public /* Customer */ Response getCustomer(@CookieParam("sessionid") String sessionid, @PathParam("custid") String customerid) {
 		try {
 			// make sure the user isn't trying to update a customer other than the one currently logged in
-			if (!validate(customerid)) {
-				return Response.status(Response.Status.FORBIDDEN).build();
+			//if (!validate(customerid)) {
+			//	return Response.status(Response.Status.FORBIDDEN).build();
 				
-			}
+			//}
 			Customer customer = customerService.getCustomerByUsername(customerid);
 			
 			return Response.ok(customer).build();
@@ -67,9 +67,9 @@ public class CustomerREST {
 	@Path("/byid/{custid}")
 	@Produces("application/json")
 	public /* Customer */ Response putCustomer(@CookieParam("sessionid") String sessionid, Customer customer) {
-		if (!validate(customer.getUsername())) {
-			return Response.status(Response.Status.FORBIDDEN).build();
-		}
+		//if (!validate(customer.getUsername())) {
+		//	return Response.status(Response.Status.FORBIDDEN).build();
+		//}
 		
 		Customer customerFromDB = customerService.getCustomerByUsernameAndPassword(customer.getUsername(), customer.getPassword());
 		if (customerFromDB == null) {
