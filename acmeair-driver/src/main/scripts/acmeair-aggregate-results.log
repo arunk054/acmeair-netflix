@@ -1,14 +1,52 @@
 Creating summariser <summary>
-Created the tree successfully using acmeair-driver_vmware_1.jmx
-Starting the test @ Wed Jul 15 14:28:55 PDT 2015 (1436995735789)
+Created the tree successfully using acmeair-driver_vmware_const_througput.jmx
+Starting the test @ Thu Jul 16 11:35:12 PDT 2015 (1437071712183)
 Waiting for possible shutdown message on port 4445
-Generate Summary Results +     12 in   4.1s =    3.0/s Avg:   340 Min:     2 Max:   684 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
-summary +     12 in   4.1s =    3.0/s Avg:   340 Min:     2 Max:   684 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
-Generate Summary Results +    147 in    30s =    4.9/s Avg:   727 Min:     1 Max:  2476 Err:    14 (9.52%) Active: 5 Started: 5 Finished: 0
-Generate Summary Results =    159 in  34.1s =    4.7/s Avg:   697 Min:     1 Max:  2476 Err:    14 (8.81%)
-summary +    147 in    30s =    4.9/s Avg:   727 Min:     1 Max:  2476 Err:    14 (9.52%) Active: 5 Started: 5 Finished: 0
-summary =    159 in  34.1s =    4.7/s Avg:   697 Min:     1 Max:  2476 Err:    14 (8.81%)
-Generate Summary Results +    146 in  30.2s =    4.8/s Avg:   662 Min:     1 Max:  2769 Err:     6 (4.11%) Active: 3 Started: 5 Finished: 2
-Generate Summary Results =    305 in  64.3s =    4.7/s Avg:   681 Min:     1 Max:  2769 Err:    20 (6.56%)
-summary +    146 in  30.2s =    4.8/s Avg:   662 Min:     1 Max:  2769 Err:     6 (4.11%) Active: 3 Started: 5 Finished: 2
-summary =    305 in  64.3s =    4.7/s Avg:   681 Min:     1 Max:  2769 Err:    20 (6.56%)
+Generate Summary Results +    219 in    18s =   12.5/s Avg:     9 Min:     1 Max:    62 Err:     0 (0.00%) Active: 5 Started: 5 Finished: 0
+summary +    219 in    18s =   12.5/s Avg:     9 Min:     1 Max:    62 Err:     0 (0.00%) Active: 5 Started: 5 Finished: 0
+Generate Summary Results +   3425 in    60s =   57.1/s Avg:    12 Min:     0 Max:   118 Err:     0 (0.00%) Active: 100 Started: 105 Finished: 5
+Generate Summary Results =   3644 in    78s =   47.0/s Avg:    11 Min:     0 Max:   118 Err:     0 (0.00%)
+summary +   3425 in    60s =   57.1/s Avg:    12 Min:     0 Max:   118 Err:     0 (0.00%) Active: 100 Started: 105 Finished: 5
+summary =   3644 in    78s =   47.0/s Avg:    11 Min:     0 Max:   118 Err:     0 (0.00%)
+Generate Summary Results +   8408 in    30s =  280.3/s Avg:    18 Min:     0 Max:   358 Err:     0 (0.00%) Active: 100 Started: 105 Finished: 5
+Generate Summary Results =  12052 in   108s =  112.0/s Avg:    16 Min:     0 Max:   358 Err:     0 (0.00%)
+summary +   8408 in    30s =  280.3/s Avg:    18 Min:     0 Max:   358 Err:     0 (0.00%) Active: 100 Started: 105 Finished: 5
+summary =  12052 in   108s =  112.0/s Avg:    16 Min:     0 Max:   358 Err:     0 (0.00%)
+Generate Summary Results +   8348 in    30s =  278.3/s Avg:    19 Min:     0 Max:   248 Err:     0 (0.00%) Active: 100 Started: 105 Finished: 5
+Generate Summary Results =  20400 in   138s =  148.3/s Avg:    17 Min:     0 Max:   358 Err:     0 (0.00%)
+summary +   8348 in    30s =  278.3/s Avg:    19 Min:     0 Max:   248 Err:     0 (0.00%) Active: 100 Started: 105 Finished: 5
+summary =  20400 in   138s =  148.3/s Avg:    17 Min:     0 Max:   358 Err:     0 (0.00%)
+Generate Summary Results +   8388 in    30s =  279.6/s Avg:    20 Min:     0 Max:   371 Err:     0 (0.00%) Active: 100 Started: 105 Finished: 5
+Generate Summary Results =  28788 in   168s =  171.8/s Avg:    18 Min:     0 Max:   371 Err:     0 (0.00%)
+summary +   8388 in    30s =  279.6/s Avg:    20 Min:     0 Max:   371 Err:     0 (0.00%) Active: 100 Started: 105 Finished: 5
+summary =  28788 in   168s =  171.8/s Avg:    18 Min:     0 Max:   371 Err:     0 (0.00%)
+Generate Summary Results +   8365 in    30s =  278.8/s Avg:    21 Min:     0 Max:   403 Err:     0 (0.00%) Active: 100 Started: 105 Finished: 5
+Generate Summary Results =  37153 in   198s =  188.0/s Avg:    19 Min:     0 Max:   403 Err:     0 (0.00%)
+summary +   8365 in    30s =  278.8/s Avg:    21 Min:     0 Max:   403 Err:     0 (0.00%) Active: 100 Started: 105 Finished: 5
+summary =  37153 in   198s =  188.0/s Avg:    19 Min:     0 Max:   403 Err:     0 (0.00%)
+Generate Summary Results +   8335 in    30s =  277.7/s Avg:    22 Min:     0 Max:   338 Err:     0 (0.00%) Active: 100 Started: 105 Finished: 5
+Generate Summary Results =  45488 in   228s =  199.9/s Avg:    19 Min:     0 Max:   403 Err:     0 (0.00%)
+summary +   8335 in    30s =  277.7/s Avg:    22 Min:     0 Max:   338 Err:     0 (0.00%) Active: 100 Started: 105 Finished: 5
+summary =  45488 in   228s =  199.9/s Avg:    19 Min:     0 Max:   403 Err:     0 (0.00%)
+Generate Summary Results +   6031 in    30s =  201.1/s Avg:   155 Min:     0 Max:  1179 Err:    31 (0.51%) Active: 100 Started: 105 Finished: 5
+Generate Summary Results =  51519 in   258s =  200.0/s Avg:    35 Min:     0 Max:  1179 Err:    31 (0.06%)
+summary +   6031 in    30s =  201.1/s Avg:   155 Min:     0 Max:  1179 Err:    31 (0.51%) Active: 100 Started: 105 Finished: 5
+summary =  51519 in   258s =  200.0/s Avg:    35 Min:     0 Max:  1179 Err:    31 (0.06%)
+Generate Summary Results +   4122 in    30s =  137.4/s Avg:   413 Min:     0 Max:  1157 Err:   432 (10.48%) Active: 100 Started: 105 Finished: 5
+summary +   4122 in    30s =  137.4/s Avg:   413 Min:     0 Max:  1157 Err:   432 (10.48%) Active: 100 Started: 105 Finished: 5
+Generate Summary Results =  55641 in   288s =  193.5/s Avg:    63 Min:     0 Max:  1179 Err:   463 (0.83%)
+summary =  55641 in   288s =  193.5/s Avg:    63 Min:     0 Max:  1179 Err:   463 (0.83%)
+Generate Summary Results +   2100 in    30s =   70.0/s Avg:   727 Min:     0 Max: 12544 Err:    46 (2.19%) Active: 100 Started: 105 Finished: 5
+Generate Summary Results =  57741 in   318s =  181.8/s Avg:    87 Min:     0 Max: 12544 Err:   509 (0.88%)
+summary +   2100 in    30s =   70.0/s Avg:   727 Min:     0 Max: 12544 Err:    46 (2.19%) Active: 100 Started: 105 Finished: 5
+summary =  57741 in   318s =  181.8/s Avg:    87 Min:     0 Max: 12544 Err:   509 (0.88%)
+Generate Summary Results +    822 in    30s =   27.4/s Avg:  3683 Min:     0 Max: 20006 Err:   310 (37.71%) Active: 100 Started: 105 Finished: 5
+Generate Summary Results =  58563 in   348s =  168.5/s Avg:   138 Min:     0 Max: 20006 Err:   819 (1.40%)
+summary +    822 in    30s =   27.4/s Avg:  3683 Min:     0 Max: 20006 Err:   310 (37.71%) Active: 100 Started: 105 Finished: 5
+summary =  58563 in   348s =  168.5/s Avg:   138 Min:     0 Max: 20006 Err:   819 (1.40%)
+summary +    259 in    28s =    9.4/s Avg:  7858 Min:     0 Max: 20007 Err:   133 (51.35%) Active: 0 Started: 105 Finished: 105
+summary =  58822 in   375s =  156.8/s Avg:   172 Min:     0 Max: 20007 Err:   952 (1.62%)
+Generate Summary Results +    259 in    28s =    9.4/s Avg:  7858 Min:     0 Max: 20007 Err:   133 (51.35%) Active: 0 Started: 105 Finished: 105
+Generate Summary Results =  58822 in   375s =  156.8/s Avg:   172 Min:     0 Max: 20007 Err:   952 (1.62%)
+Tidying up ...    @ Thu Jul 16 11:41:27 PDT 2015 (1437072087658)
+... end of run

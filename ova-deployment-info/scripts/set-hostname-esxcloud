@@ -19,7 +19,12 @@ case "$1" in
 	IP_ADDR=`ifconfig|grep 'inet addr'|grep Bcast|cut -d ':' -f2|cut -d ' ' -f1`
 	hostname=$(host $IP_ADDR | cut -d ' ' -f 5 | sed -e 's/\.$//')
 	echo $hostname > $HOSTNAME_FILE
-	echo '127.0.0.1 '$hostname>>/etc/hosts
+	last=`tail -n -1 $HOSTS_FILE`
+	if [[ "$last" =~ ^127.* ]]
+	then
+		sed -i '$ d' $HOSTS_FILE
+	fi
+	echo '127.0.0.1 '$hostname>>$HOSTS_FILE
 	hostname $hostname
 	;;
  *)

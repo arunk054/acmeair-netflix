@@ -1,2 +1,1 @@
--Darchaius.deployment.applicationId=acmeair-auth-service
--Darchaius.dynamicPropertyFactory.registerConfigWithJMX=true
+-Darchaius.deployment.applicationId=acmeair-auth-service -Darchaius.dynamicPropertyFactory.registerConfigWithJMX=true

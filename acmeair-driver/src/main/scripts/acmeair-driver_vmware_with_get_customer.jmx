@@ -4,7 +4,7 @@
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan1" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
-      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
         <collectionProp name="Arguments.arguments">
           <elementProp name="service" elementType="Argument">
@@ -235,14 +235,17 @@
             <boolProp name="resetInterpreter">false</boolProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="filename"></stringProp>
-            <stringProp name="script">//DO this if you are doing a fault tolerant approach, i.e. retrying till the request is successful
-
+            <stringProp name="script">
 /*import org.apache.jmeter.protocol.http.control.CookieManager; 
 
 if (${responseCode}==200) {
 	log.info(&quot;Login Success&quot;);
-	vars.put(&quot;isRetry&quot;,&quot;false&quot;);
-	//log.info(vars.get(&quot;COOKIE_sessionid&quot;));
+	
+	CookieManager manager = ctx.getCurrentSampler().getProperty(&quot;HTTPSampler.cookie_manager&quot;).getObjectValue(); 
+	int i = 0;
+	
+	manager.get(i).setDomain(vars.get(&quot;webappIP&quot;));
+	
 }*/</stringProp>
           </BeanShellPostProcessor>
           <hashTree/>
@@ -959,15 +962,18 @@ if (len == 0 )
             <boolProp name="resetInterpreter">false</boolProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="filename"></stringProp>
-            <stringProp name="script">//DO this if you are doing a fault tolerant approach, i.e. retrying till the request is successful
-
-/*import org.apache.jmeter.protocol.http.control.CookieManager; 
+            <stringProp name="script">
+import org.apache.jmeter.protocol.http.control.CookieManager; 
 
 if (${responseCode}==200) {
 	log.info(&quot;Login Success&quot;);
-	vars.put(&quot;isRetry&quot;,&quot;false&quot;);
-	//log.info(vars.get(&quot;COOKIE_sessionid&quot;));
-}*/</stringProp>
+	
+	CookieManager manager = ctx.getCurrentSampler().getProperty(&quot;HTTPSampler.cookie_manager&quot;).getObjectValue(); 
+	int i = 0;
+	
+	manager.get(i).setDomain(vars.get(&quot;webappIP&quot;));
+	
+}</stringProp>
           </BeanShellPostProcessor>
           <hashTree/>
         </hashTree>
@@ -1688,15 +1694,18 @@ if (len == 0 )
             <boolProp name="resetInterpreter">false</boolProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="filename"></stringProp>
-            <stringProp name="script">//DO this if you are doing a fault tolerant approach, i.e. retrying till the request is successful
-
-/*import org.apache.jmeter.protocol.http.control.CookieManager; 
+            <stringProp name="script">
+import org.apache.jmeter.protocol.http.control.CookieManager; 
 
 if (${responseCode}==200) {
 	log.info(&quot;Login Success&quot;);
-	vars.put(&quot;isRetry&quot;,&quot;false&quot;);
-	//log.info(vars.get(&quot;COOKIE_sessionid&quot;));
-}*/</stringProp>
+	
+	CookieManager manager = ctx.getCurrentSampler().getProperty(&quot;HTTPSampler.cookie_manager&quot;).getObjectValue(); 
+	int i = 0;
+	
+	manager.get(i).setDomain(vars.get(&quot;webappIP&quot;));
+	
+}</stringProp>
           </BeanShellPostProcessor>
           <hashTree/>
         </hashTree>
