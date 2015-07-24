@@ -6,3 +6,4 @@
 */.project
 .gradle
 .metadata
+*/jmeter.log
