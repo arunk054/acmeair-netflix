@@ -1,11 +1,26 @@
 #!/bin/bash
 #
-# set-hostname-esxcloud         
+# set-hostname-esxcloud        
 #
-# description: 	set a hostname based on dhcp name, required  because eureka expects a unique hostname.
+# chkconfig: 
+# description:  set a hostname based on dhcp name, required  because eureka expects a unique hostname.
+### BEGIN INIT INFO
+# Provides:         set-hostname-esxcloud 
+# Required-Start:   
+# Required-Stop: 
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start daemon at boot time
+# Description:       Enable service provided by daemon.
+### END INIT INFO
 
 # Source function library.
-. /etc/init.d/functions
+#Centos
+#. /etc/init.d/functions
+#Ubuntu
+. /lib/lsb/init-functions
+
+
 
 
 RETVAL=$?
