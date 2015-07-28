@@ -26,12 +26,12 @@
           </elementProp>
           <elementProp name="CONNECT_TIMEOUT" elementType="Argument">
             <stringProp name="Argument.name">CONNECT_TIMEOUT</stringProp>
-            <stringProp name="Argument.value">5000</stringProp>
+            <stringProp name="Argument.value"></stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="RESPONSE_TIMEOUT" elementType="Argument">
             <stringProp name="Argument.name">RESPONSE_TIMEOUT</stringProp>
-            <stringProp name="Argument.value">20000</stringProp>
+            <stringProp name="Argument.value"></stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="LOAD_BALANCER_PATH" elementType="Argument">
@@ -121,7 +121,7 @@
         <longProp name="ThreadGroup.start_time">1436479264000</longProp>
         <longProp name="ThreadGroup.end_time">1436479264000</longProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">300</stringProp>
+        <stringProp name="ThreadGroup.duration">600</stringProp>
         <stringProp name="ThreadGroup.delay">1</stringProp>
       </ThreadGroup>
       <hashTree>
