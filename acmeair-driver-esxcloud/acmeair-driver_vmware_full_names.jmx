@@ -36,7 +36,7 @@
           </elementProp>
           <elementProp name="LOAD_BALANCER_PATH" elementType="Argument">
             <stringProp name="Argument.name">LOAD_BALANCER_PATH</stringProp>
-            <stringProp name="Argument.value">perf-loadbalancer-1.0-SNAPSHOT/GetWebapp</stringProp>
+            <stringProp name="Argument.value">perf-loadbalancer-1.0-SNAPSHOT/GetCachedWebapp</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="WEBAPP_DEFAULT_PORT" elementType="Argument">
