@@ -1,3 +1,7 @@
+## POSTER
+
+![Poster @Vmware Internship](https://github.com/arunk054/acmeair-netflix/blob/master/POSTER_Arun_Kalyanasundaram_VMWARE.jpg)
+
 ## NetflixOSS Acme Air Sample and Benchmark
 
 This application shows an implementation of a fictitious airline called "Acme Air".  The application was built with the some key business requirements: the ability to scale to billions of web API calls per day, the need to develop and deploy the application in public clouds (as opposed to dedicated pre-allocated infrastructure), and the need to support multiple channels for user interaction (with mobile enablement first and browser/Web 2.0 second).  In addition to the original Acme Air application, the application has been changed to leverage the Netflix OSS cloud platform.
